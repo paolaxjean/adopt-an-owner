@@ -4,16 +4,31 @@
      "name": "sofia",
     "password": "password",
     "desired_pet": "dog",
-    "family_size": 2
+    "family_size": 2,
+    "income":75000,
+    "email":"sofia@email.com",
+    "age":19,
+    "bio":"lorem ipsum"
   },
   { "id": 2,
     "name": "zack",
     "password": "password123",
-    "desired_pet":"cat"
+    "desired_pet":"cat",
+    "family_size":5,
+    "income": 100000,
+    "email":"z@gmail.com",
+    "age":33,
+    "bio":"lorem ipsum"
   },
   {  "id": 3,
     "name": "beth",
     "password": "password123!",
-    "desired_pet":"cat and dog"
+    "desired_pet":"cat and dog",
+    "family_size":4,
+    "income":130000,
+    "email":"bb@yahoo.com",
+    "age":25,
+    "bio":"lorem ipsum"
+    
   }
 ]
