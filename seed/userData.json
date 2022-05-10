@@ -1,14 +1,19 @@
 [
   {
-    "username": "harry",
-    "password": "password123"
+     "id": 1,
+     "name": "sofia",
+    "password": "password",
+    "desired_pet": "dog",
+    "family_size": 2
   },
-  {
-    "username": "hermione",
-    "password": "password123"
+  { "id": 2,
+    "name": "zack",
+    "password": "password123",
+    "desired_pet":"cat"
   },
-  {
-    "username": "hagrid",
-    "password": "password123"
+  {  "id": 3,
+    "name": "beth",
+    "password": "password123!",
+    "desired_pet":"cat and dog"
   }
 ]
