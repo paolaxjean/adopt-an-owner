@@ -18,14 +18,43 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: { isAplhanumeric: true}
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {len: [8]}
     },
+    desired_pet: {
+      type: DataTypes.STRING,
+      validate: { isAplhanumeric: true, len: [0, 100]}
+    },
+    family_size: {
+      type: DataTypes.INTEGER,
+      validate: {len: [1, 20]}
+    },
+    income: {
+      type: DataTypes.INTEGER,
+      validate: {max: 999000000}
+    },
+    email: {
+      type: DataTypes.STRING,
+      validate: { isEmail: true}
+    },
+    age: {
+      type: DataTypes.INTEGER,
+      validate: {len: [1, 99]}
+    },
+    bio: {
+      type: DataTypes.STRING,
+      validate: {
+        isAlphanumeric: true, 
+        len: [0, 10000]
+      }
+    }
   },
   {
     hooks: {
