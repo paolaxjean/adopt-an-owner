@@ -1,0 +1,21 @@
+{{#if isLoggedIn}}
+  <h2>Welcome!</h2>
+<section class="Bio">
+  <div class="owner-details">
+    <h3>{{User.name}}</h3>
+    <p>Id: {{User.id}}</p>
+    <p>Age: {{User.age}}</p>
+    <p>Desired Pet: {{User.desired_pet}}</p>
+    <p>Family Size:{{ User.family_size}}</p>
+    <p>Income:{{ User.income}}</p>
+    <p>Bio:{{ User.bio}}</p>
+  </div>
+</section>
+{{/if}}
+{{#unless isLoggedIn}}
+  <br />
+  <a class='btn' href='/signup'>Sign Up</a>
+  <a class= 'btn' href='/login'>login</a>
+{{/unless}}
+
+
