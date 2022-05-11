@@ -2,13 +2,13 @@
   <h2>Welcome!</h2>
 <section class="Bio">
   <div class="owner-details">
-    <h3>{{User.name}}</h3>
-    <p>Id: {{User.id}}</p>
-    <p>Age: {{User.age}}</p>
-    <p>Desired Pet: {{User.desired_pet}}</p>
-    <p>Family Size:{{ User.family_size}}</p>
-    <p>Income:{{ User.income}}</p>
-    <p>Bio:{{ User.bio}}</p>
+    <h3>{{profile.name}}</h3>
+    <p>Id: {{profile.id}}</p>
+    <p>Age: {{profile.age}}</p>
+    <p>Desired Pet: {{profile.desired_pet}}</p>
+    <p>Family Size:{{ profile.family_size}}</p>
+    <p>Income:{{profile.income}}</p>
+    <p>Bio:{{ profile.bio}}</p>
   </div>
 </section>
 
@@ -17,5 +17,4 @@
   <a class='btn' href='/signup'>Sign Up</a>
   <a class= 'btn' href='/login'>login</a>
 {{/unless}}
-
 
