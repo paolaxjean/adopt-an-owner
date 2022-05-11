@@ -4,6 +4,12 @@ const handleSignupSubmit = async (event) => {
   try {
     const username = document.querySelector("#username").value.trim();
     const password = document.querySelector("#password").value.trim();
+    const fullName  = document.querySelector("#full-name").value.trim();
+    const age  = document.querySelector("#user-age").value.trim();
+    const desirePet  = document.querySelector("#desired-pet").value.trim();
+    const familySize  = document.querySelector("#family-size").value.trim();
+    const income  = document.querySelector("#income").value.trim();
+    const bio  = document.querySelector("#bio").value.trim();
     const confirmPassword = document
       .querySelector("#confirm-password")
       .value.trim();
@@ -20,7 +26,7 @@ const handleSignupSubmit = async (event) => {
 
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ username, password,fullName,age,desirePet,familySize,income,bio }),
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
