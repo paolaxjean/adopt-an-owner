@@ -21,7 +21,7 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: { isAplhanumeric: true}
+      //validate: { isAplhanumeric: true}
     },
     password: {
       type: DataTypes.STRING,

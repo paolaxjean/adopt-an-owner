@@ -4,7 +4,7 @@ const router = require("express").Router();
 router.post("/", async (req, res) => {
   const { username, password } = req.body;
   try {
-    const user = await User.create(req.body, { username, password });
+    const user = await User.create(req.body, { username, password});
     req.session.isLoggedIn = true;
     req.session.userId = user.id;
     req.session.save(() => res.json({ id: user.id }));
@@ -13,6 +13,21 @@ router.post("/", async (req, res) => {
     res.status(500).json({ message: "Internal server error." });
   }
 });
+
+
+router.post("/signup", async (req, res) => {
+ 
+  try {
+    const user = await User.create(req.body, { username:req.body.name, password:req.body.password, desired_pet:req.body.desired_pet, family_size:req.body.family_size, income:req.body.income, email:req.body.email, age:req.body.age, bio:req.body.bio });
+    req.session.isLoggedIn = true;
+    req.session.userId = user.id;
+    req.session.save(() => res.json({ id: user.id }));
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
+
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
@@ -44,5 +59,7 @@ router.post("/logout", (req, res) => {
     res.end();
   });
 });
+
+
 
 module.exports = router;
