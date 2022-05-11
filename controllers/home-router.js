@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
-const withAuth = require("../util/withAuth");
+// const withAuth = require("../util/withAuth");
 
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
@@ -37,28 +37,28 @@ router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
 });
 
-router.get("/users", async (req, res) => {
+router.get("/owners", async (req, res) => {
   try {
   const users = await User.findAll();
   const adopters = await users.map((u) => {
     u.get({plain: true});
   })
   // console.log(users)
-  res.json(users)
-  // res.render("owners", {adopters});
+  // res.json(users)
+  res.render("owners", adopters);
   } catch (error) {
     res.status(500).json(error)
   }
 })
 
-router.get("/users/:id", async (req, res) => {
+router.get("/owners/:id", async (req, res) => {
   try {
     const profileData = await User.findByPk(req.params.id, {
       exclude: ['password']
     })
     const profile = await profileData.get({ plain: true })
     // console.log(profile)
-    res.json(profile)
+    // res.json(profile)
     res.render("bio", {profile}) 
   } catch (error) {
     res.status(500).json(error);
@@ -66,3 +66,4 @@ router.get("/users/:id", async (req, res) => {
 })
 
 module.exports = router;
+
