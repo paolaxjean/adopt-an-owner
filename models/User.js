@@ -21,7 +21,7 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: { isAplhanumeric: true}
+      validate: { len: [1, 50]}
     },
     password: {
       type: DataTypes.STRING,
@@ -30,7 +30,7 @@ User.init(
     },
     desired_pet: {
       type: DataTypes.STRING,
-      validate: { isAplhanumeric: true, len: [0, 100]}
+      validate: { isAlphanumeric: true, len: [0, 100]}
     },
     family_size: {
       type: DataTypes.INTEGER,
