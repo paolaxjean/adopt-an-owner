@@ -1,8 +1,13 @@
+
 <section class="owners">
+  {{#each owners}}
   <div class="owners-details">
-    <h3>{{owners.name}}</h3>
-    <p>Preferred Pet: {{.information}}</p>
-    <p>City,State: {{owners.location}}</p>
-    <p>Home Type: {{owners.hometype}}</p>
+    <a href="/owners/{{id}}"><h3>{{name}}</h3></a>
+    <p>Desired Pet: {{desired_pet}}</p>
+    <p>Family Size: {{family_size}}</p>
+    <p>Income: {{income}}</p>
+    <p>Email: {{email}}</p>
   </div>
 </section>
+{{/each}}
+
