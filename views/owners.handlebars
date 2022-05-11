@@ -1,4 +1,4 @@
-
+{{!-- 
 <section class="owners">
   {{#each owners}}
   <div class="owners-details">
@@ -9,5 +9,24 @@
     <p>Email: {{email}}</p>
   </div>
 </section>
-{{/each}}
+{{/each}} --}}
 
+<section class="owners">
+ {{#each owners}}
+<div class="col-12 col-md-8">
+                <div class="card-body">
+                  <a href="/owners/{{id}}"> <h3 class="card-title">{{name}}</h3></a>
+                  <p class="card-text">Desired Pet:{{desired_pet}}</p>
+                  <p class="card-text">Family Size: {{family_size}}</p>
+                  <p class="card-text">Income: {{income}}</p>
+                  <p class="card-text">Email: {{email}}</p>
+                  
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  <button class="btn btn-success"><a href="/owners/{{id}}"></a>View Owner</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+{{/each}}
