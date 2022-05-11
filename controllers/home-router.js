@@ -37,4 +37,35 @@ router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
 });
 
+router.get("/users", async (req, res) => {
+  try {
+  const users = await User.findAll();
+  const adopters = await users.map((u) => {
+    u.get({plain: true});
+  })
+  console.log(users)
+  res.json(users)
+  res.render("owners", adopters);
+  } catch (error) {
+    res.status(500).json(error)
+  }
+})
+
+router.get("/users/:id", async (req, res) => {
+  try {
+    const profileData = await User.findByPk(req.params.id, {
+      exclude: ['password']
+    })
+    const profile = await profileData.get({ plain: true })
+    console.log(profile)
+    res.json(profile)
+    // res.render("bio", {profile}) 
+    // ^ error: Cannot set headers after they are sent to the client
+  } catch (error) {
+    res.status(500).json(error);
+  }
+})
+
+
+
 module.exports = router;
