@@ -1,4 +1,4 @@
-{{#if isLoggedIn}}
+
   <h2>Welcome!</h2>
 <section class="Bio">
   <div class="owner-details">
@@ -11,7 +11,7 @@
     <p>Bio:{{ User.bio}}</p>
   </div>
 </section>
-{{/if}}
+
 {{#unless isLoggedIn}}
   <br />
   <a class='btn' href='/signup'>Sign Up</a>
