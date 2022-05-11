@@ -1,17 +1,22 @@
 <h1>Log-in</h1>
 
 <form class='login-form'>
-  <div class=""form-group"> 
-    <label for='username'>Username</label><br />
-    <input type='text' name='username' id='username' /><br />
+  <div class="mb-3">
+      <div class="col-12 col-md-10 mb-3 p-4 bg-white">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user123@gmail.com">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
   </div>
-  <div class=" "form group">
-    <label for='password'>Password</label><br />
-    <input type='password' name='password' id='password' /><br />
+  <div class="mb-3">
+      <div class="col-12 col-md-10 mb-3 p-4 bg-white">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password123!">
+      <div id="passwordHelpInline" class="form-text">Must be 8-20 characters long.</div>
   </div>
-  <div class="form-group">
-    <button class='btn' type='submit'>Submit</button>
-  </div>
-</form>
-<p>Don't have an account yet? <a href='/signup'>Sign Up Here</a></p>
-<script src='/js/login.js'></script>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <p>Don't have an account yet? <a href='/signup'>Sign Up Here</a></p>
+    <script src='/js/login.js'></script>
+
