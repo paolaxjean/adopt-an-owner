@@ -30,7 +30,7 @@ User.init(
     },
     desired_pet: {
       type: DataTypes.STRING,
-      validate: { isAlphanumeric: true, len: [0, 100]}
+      validate: { len: [0, 100]}
     },
     family_size: {
       type: DataTypes.INTEGER,
@@ -51,7 +51,6 @@ User.init(
     bio: {
       type: DataTypes.STRING,
       validate: {
-        isAlphanumeric: true, 
         len: [0, 10000]
       }
     }
