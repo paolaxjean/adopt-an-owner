@@ -6,7 +6,7 @@ const handleSignupSubmit = async (event) => {
     const password = document.querySelector("#password").value.trim();
     const fullName  = document.querySelector("#name").value.trim();
     const age  = document.querySelector("#user-age").value.trim();
-    const desirePet  = document.querySelector("#desired-pet").value.trim();
+    const desiredPet  = document.querySelector("#desired-pet").value.trim();
     const familySize  = document.querySelector("#family-size").value.trim();
     const income  = document.querySelector("#income").value.trim();
     const bio  = document.querySelector("#bio").value.trim();
@@ -24,14 +24,14 @@ const handleSignupSubmit = async (event) => {
       return;
     }
 
-    const response = await fetch("/signup", {
+    const response = await fetch("/api/users/signup", {
       method: "POST",
-      body: JSON.stringify({ email, password,fullName,age,desirePet,familySize,income,bio }),
+      body: JSON.stringify({ email, password, name: fullName, age, desired_pet: desiredPet,family_size: familySize, income,bio }),
       headers: {
         "Content-Type": "application/json; charset=UTF-8",
       },
     });
-
+  console.log('request')
     if (!response.ok) {
       alert("Failed to sign up.");
       return;
