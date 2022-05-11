@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { User } = require("../models");
 
 // use withAuth middleware to redirect from protected routes.
-// const withAuth = require("../util/withAuth");
+const withAuth = require("../util/withAuth");
 
 // example of a protected route
 // router.get("/users-only", withAuth, (req, res) => {
@@ -43,9 +43,9 @@ router.get("/users", async (req, res) => {
   const adopters = await users.map((u) => {
     u.get({plain: true});
   })
-  console.log(users)
+  // console.log(users)
   res.json(users)
-  res.render("owners", adopters);
+  // res.render("owners", {adopters});
   } catch (error) {
     res.status(500).json(error)
   }
@@ -57,15 +57,12 @@ router.get("/users/:id", async (req, res) => {
       exclude: ['password']
     })
     const profile = await profileData.get({ plain: true })
-    console.log(profile)
+    // console.log(profile)
     res.json(profile)
-    // res.render("bio", {profile}) 
-    // ^ error: Cannot set headers after they are sent to the client
+    res.render("bio", {profile}) 
   } catch (error) {
     res.status(500).json(error);
   }
 })
-
-
 
 module.exports = router;
