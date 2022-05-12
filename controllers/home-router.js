@@ -1,13 +1,6 @@
 const router = require("express").Router();
 const { User } = require("../models");
 const withAuth = require("../util/withAuth");
-// use withAuth middleware to redirect from protected routes.
-
-
-// example of a protected route
-// router.get("/users-only", withAuth, (req, res) => {
-//   // ...
-// });
 
 router.get("/", async (req, res) => {
   try {
@@ -37,34 +30,34 @@ router.get("/signup", (req, res) => {
   res.render("signup", { title: "Sign-Up Page" });
 });
 
-router.get("/owners",withAuth, async (req, res) => {
+router.get("/owners", withAuth, async (req, res) => {
   try {
-  const users = await User.findAll();
-  const owners = await users.map((u) => {
-   return u.get({plain: true});
-  })
-  res.render('owners', {owners, isLoggedIn: req.session.isLoggedIn});
+    const users = await User.findAll();
+    const owners = await users.map((u) => {
+      return u.get({ plain: true });
+    });
+    res.render("owners", { owners, isLoggedIn: req.session.isLoggedIn });
   } catch (error) {
-    res.status(500).json(error)
-  } 
-})
+    res.status(500).json(error);
+  }
+});
 
 // for viewing a specific owner profile
 router.get("/owners/:id", async (req, res) => {
   try {
     const profileData = await User.findByPk(req.params.id, {
-      exclude: ['password']
-    })
-    const profile = await profileData.get({ plain: true })
-    res.render('bio', {profile, isLoggedIn: req.session.isLoggedIn}) 
+      exclude: ["password"],
+    });
+    const profile = await profileData.get({ plain: true });
+    res.render("bio", { profile, isLoggedIn: req.session.isLoggedIn });
   } catch (error) {
     res.status(500).json(error);
   }
-})
+});
 
 //route for browse pets page - time permitting
 router.get("/pets", (req, res) => {
-  res.render("pets", {isLoggedIn: req.session.isLoggedIn});
+  res.render("pets", { isLoggedIn: req.session.isLoggedIn });
 });
 
 module.exports = router;
