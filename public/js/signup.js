@@ -17,6 +17,10 @@ const handleSignupSubmit = async (event) => {
       return;
     }
 
+    if (password.length < 8){
+      alert("Password must be more than eight characters")
+    }
+
     const response = await fetch("/api/users/signup", {
       method: "POST",
       body: JSON.stringify({ email, password, name: fullName, age, desired_pet: desiredPet,family_size: familySize, income,bio }),
