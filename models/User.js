@@ -33,8 +33,8 @@ User.init(
       validate: { len: [0, 100]}
     },
     family_size: {
-      type: DataTypes.INTEGER,
-      validate: {len: [1, 20]}
+      type: DataTypes.STRING,
+      validate: { len: [0, 100]}
     },
     income: {
       type: DataTypes.INTEGER,

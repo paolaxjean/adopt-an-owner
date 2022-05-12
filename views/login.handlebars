@@ -1,21 +1,27 @@
-<h1>Log-in</h1>
-
-<form class='login-form'>
+<form class='login-form class col-12 col-md-10 mb-3 p-4 md-white mx-auto'>
+  <div class="mb-3 card body text">
+      <div class="mx-auto" style="width: 200px;">
+          <h1>Log-in</h1>
+      </div>
+      <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user123@gmail.com">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+  <div class="mb-3">
+      <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
+          <label for="exampleInputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password123!">
+        <div class="mb-3 mx-auto" id="passwordHelpInline" class="form-text">Must be 8-20 characters long.</div>
+      </div>
+  </div>
  
-    <label for='email'>Email</label><br />
-    <input type='email' name='email' id='email' /><br />
-
-
-
-    <label for='password'>Password</label><br />
-    <input type='password' name='password' id='password' /><br />
-  
-
-    <button class='btn' type='submit'>Submit</button>
-  
+  <div class="mb-3">
+      <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
 </form>
 
-
-<p>Don't have an account yet? <a href='/signup'>Sign Up Here</a></p>
-<script src='/js/login.js'></script>
-
+    <div class="col-12 col-md-10 mb-3 p-4 bg-white mx-auto">
+    <p>Don't have an account yet? <a href='/signup'>Sign Up Here</a></p>
+    <script src='/js/login.js'></script>
