@@ -1,20 +1,6 @@
-{{!-- 
-<section class="owners">
-  {{#each owners}}
-  <div class="owners-details">
-    <a href="/owners/{{id}}"><h3>{{name}}</h3></a>
-    <p>Desired Pet: {{desired_pet}}</p>
-    <p>Family Size: {{family_size}}</p>
-    <p>Income: {{income}}</p>
-    <p>Email: {{email}}</p>
-  </div>
-</section>
-{{/each}} --}}
-
 <section class="owners">
  {{#each owners}}
   <div class="col-12 col-md-8">
-    <div class="row justify-content-center">
       <div class="row"></div>
   
                 <div class="card-body">
@@ -25,8 +11,7 @@
                   <p class="card-text">Email: {{email}}</p>
                   <a href="/owners/{{id}}"> <button class="btn btn-success">View Owner</button></a>
                 </div>
-      </div>
-    </div>   
+      </div>  
   </div>
 </section>
 {{/each}}
