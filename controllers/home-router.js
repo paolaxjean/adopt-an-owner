@@ -56,7 +56,7 @@ router.get("/owners/:id", async (req, res) => {
       exclude: ['password']
     })
     const profile = await profileData.get({ plain: true })
-    res.render('bio', {profile}) 
+    res.render('bio', {profile, isLoggedIn: req.session.isLoggedIn}) 
   } catch (error) {
     res.status(500).json(error);
   }
