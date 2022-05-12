@@ -62,4 +62,9 @@ router.get("/owners/:id", async (req, res) => {
   }
 })
 
+//route for browse pets page - time permitting
+router.get("/pets", (req, res) => {
+  res.render("pets", {isLoggedIn: req.session.isLoggedIn});
+});
+
 module.exports = router;
