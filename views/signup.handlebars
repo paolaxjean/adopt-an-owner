@@ -1,30 +1,62 @@
-<h1>Signup</h1>
-<form class='signup-form'>
+<form class='signup-form col-12 col-md-10 mb-3 p-4 md-white mx-auto'>
+  <div class="mb-3 card body text">
+     <div class="mx-auto" style="width: 200px;">
+    <h1>Sign up</h1>
+     </div>
+
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <label for='email'>Email</label><br />
-  <input type='text' name='email' id='email' /><br />
+  <input type='text' name='email' id='email' placeholder="user123@gmail.com" /><br />
+     </div>
+
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <label for='password'>Password</label><br />
-  <input type='password' name='password' id='password' /><br />
+  <input type='password' name='password' id='password' placeholder="Password123!"/><br />
+     </div>
+
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <label for='confirm-password'>Confirm Password</label><br />
-  <input type='password' name='confirm-password' id='confirm-password' /><br />
+  <input type='password' name='confirm-password' id='confirm-password' placeholder="Password123!" /><br />
+     </div>
+
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <!-- User Name-->
   <label for='name'>First and Last Name  </label><br />
   <input type='text' name='name' placeholder="John Doe" id='name' /><br />
+     </div>
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
    <!-- User Age-->
   <label for='user-age'>What's your age? </label><br />
-  <input type='text' name='user-age' placeholder="26" id='user-age' /><br />
+  <input type='number' min="1" name='user-age' placeholder="26" id='user-age' /><br />
+     </div>
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <!-- Desired Pet-->
   <label for='desired-pet'>Desired Pets  </label><br />
   <input type='text' name='desired-pet' placeholder="Cat,Dog,Size" id='desired-pet' /><br />
+     </div>
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <!-- Family Size-->
   <label for='family-size'>Family Size and Type of Home </label><br />
   <input type='text' name='family-size' placeholder="3 Kids, 2 Dogs, Apartment" id='family-size' /><br />
+
+     </div>
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
    <!-- Income-->
   <label for='income'>Monthly Income </label><br />
-  <input type='text' name='income' placeholder="2,000" id='income' /><br />
+  <input type='number' min="1" name='income' placeholder="2,000" id='income' /><br />
+     </div>
+     <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
   <!-- Bio-->
   <label for='bio'>Tell us about yourself! </label><br />
   <input type='text' size="" name='income' placeholder="Whats your unique situation?" id='bio'> <br />
-  <button class='btn' type='submit'>Submit</button>
+     </div>
+ <div class="mb-3">
+ <div class="col-12 col-md-10 mb-3 p-4 md-white mx-auto">
+      <button type="submit" class="btn btn-primary">Submit</button>
+ </div>
 </form>
+
+    <div class="col-12 col-md-10 mb-3 p-4 bg-white mx-auto">
 <p>Already have an account? <a href='/login'>Login Here</a></p>
+    </div>
 <script src='/js/signup.js'></script>
