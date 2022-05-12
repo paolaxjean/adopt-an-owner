@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace("/");
     } else {
-      document.location.replace("https://http.dog/404.jpg");
+      document.location.replace("https://http.dog/401.jpg");
     }
   }
 };
