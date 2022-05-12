@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
 router.post("/signup", async (req, res) => {
  
   try {
-    const user = await User.create(req.body, { username:req.body.name, password:req.body.password, desired_pet:req.body.desired_pet, family_size:req.body.family_size, income:req.body.income, email:req.body.email, age:req.body.age, bio:req.body.bio });
+    const user = await User.create(req.body, { name:req.body.name, password:req.body.password, desired_pet:req.body.desired_pet, family_size:req.body.family_size, income:req.body.income, email:req.body.email, age:req.body.age, bio:req.body.bio });
     req.session.isLoggedIn = true;
     req.session.userId = user.id;
     req.session.save(() => res.json({ id: user.id }));
@@ -30,9 +30,9 @@ router.post("/signup", async (req, res) => {
 
 
 router.post("/login", async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
   try {
-    const user = await User.findOne({ where: { username } });
+    const user = await User.findOne({ where: { email } });
     if (!user) {
       throw new Error("User not found.");
     }
