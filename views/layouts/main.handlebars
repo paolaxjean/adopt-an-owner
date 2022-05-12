@@ -8,21 +8,69 @@
     <link rel='stylesheet' href='/css/style.css' />
   </head>
   <body>
-    <nav>
-      <a href='/'>Home</a>
-      {{#if isLoggedIn}}
-        <a href='/owners'>Browse Owners</a>
-         <a href='/pets'>Browse Pets</a>
-         <a href='/owners'>Profile</a>
+
+    {{!-- <div class="col-12 col-md-10 mb-3 p-3 bg-white rounded"></div>
+      <nav class= "navbar navbar-expand-lg navbar-dark bg-primary">
+      
+       <a href='/'>Home</a>
+        {{#if isLoggedIn}}
+          <a href='/owners'>Browse Owners</a>
+          <a href='/pets'>Browse Pets</a>
         <button class='btn btn-logout'>Log Out</button>
-      {{else}}
-        <a href='/pets'>Browse Pets</a>
-        <a href='/login'>Login</a>
-        <a href='/signup'>Signup</a>
-      {{/if}}
-    </nav>
+        {{else}}
+         <a href='/pets'>Browse Pets</a>
+         <a href='/login'>Login</a>
+         <a href='/signup'>Signup</a>
+        {{/if}}
+      </nav>
     {{{body}}}
-    <script src='/js/main.js'></script>
-  </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    </div> --}}
+    
+  
+  
+
+
+  <div class="col-12 col-md-12 mb-3 p-3 bg-blue rounded">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="/">Adopt-a-Owner</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blue-nav"
+              aria-controls="blue-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="blue-nav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+              {{#if isLoggedIn}}
+                <li class="nav-item">
+                  <a class="nav-link" href='/owners'>Browse Owners</a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href='/pets'>Browse Pets</a>
+                </li>
+                 </li>
+                  <li class="nav-item">
+                  <a class="nav-link" >Log out</a>
+                </li>
+                <button id= "btn-logout">Log Out</button>
+              {{else}}  
+                  <li class="nav-item">
+                  <a class="nav-link" href='/pets'>Browse Pets</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href='/login'>Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+            </div>
+             {{/if}}
+          </nav>
+          {{{body}}}
+        </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src='/js/main.js'></script>
+</body>
 </html>
