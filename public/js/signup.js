@@ -10,17 +10,10 @@ const handleSignupSubmit = async (event) => {
     const familySize  = document.querySelector("#family-size").value.trim();
     const income  = document.querySelector("#income").value.trim();
     const bio  = document.querySelector("#bio").value.trim();
-    const confirmPassword = document
-      .querySelector("#confirm-password")
-      .value.trim();
+
 
     if (!email || !password) {
       alert("You must provide a email and password.");
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      alert("Passwords to not match.");
       return;
     }
 

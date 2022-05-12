@@ -43,7 +43,7 @@ router.get("/owners",withAuth, async (req, res) => {
   const owners = await users.map((u) => {
    return u.get({plain: true});
   })
-  res.render('owners', {owners});
+  res.render('owners', {owners, isLoggedIn: req.session.isLoggedIn});
   } catch (error) {
     res.status(500).json(error)
   } 
