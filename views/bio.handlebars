@@ -9,12 +9,9 @@
     <p>Family Size:{{ profile.family_size}}</p>
     <p>Income:{{profile.income}}</p>
     <p>Bio:{{ profile.bio}}</p>
+    <p>Email: {{ profile.email}}</p>
   </div>
 </section>
 
-{{#unless isLoggedIn}}
-  <br />
-  <a class='btn' href='/signup'>Sign Up</a>
-  <a class= 'btn' href='/login'>login</a>
-{{/unless}}
+
 

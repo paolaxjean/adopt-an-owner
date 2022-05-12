@@ -1,5 +1,46 @@
-<h1>Adopt-a-Pet</h1>
 {{#if isLoggedIn}}
+  <h2>Welcome, {{user.name}}!</h2>
+<article class="jumbotron jumbotron-fluid bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-12 col-md-6">
+          <img class='img-fluid' src="../images/Rescuedogs.jpg" alt="animal stock photo" />
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h1>About Us</h1>
+          <p>In todays San Diego rescue animal market, searching for the right pet for you can be challenging. 
+             A lot of the time you find the right pet but the shelter doesn't approve of your unique situation. 
+             With Adopt-a-Owner we have flipped the rescue pet search on its head by allowing the rescue 
+             pet of your dreams to come to you. Sign up today and wait for your soulmate come to you. </p>
+        </div>
+      </div>
+    </div>
+  </article>
+{{/if}}
+{{#unless isLoggedIn}}
+<article class="jumbotron jumbotron-fluid bg-dark text-light">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col-12 col-md-6">
+          <img class='img-fluid' src="../images/Rescuedogs.jpg" alt="animal" />
+        </div>
+
+        <div class="col-12 col-md-6">
+          <h1>About Us</h1>
+          <p>In todays San Diego rescue animal market, searching for the right pet for you can be challenging. 
+             A lot of the time you find the right pet but the shelter doesn't approve of your unique situation. 
+             With Adopt-a-Owner we have flipped the rescue pet search on its head by allowing the rescue 
+             pet of your dreams to come to you. Sign up today and wait for your soulmate come to you. </p>
+          <a href='/signup'><button class="btn btn-primary" id ="btn">Sign Up</button></a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <br />
+{{/unless}}
+
+{{!-- {{#if isLoggedIn}}
   <h2>Welcome, {{user.name}}!</h2>
  
 {{/if}}
@@ -12,6 +53,6 @@
 {{#unless isLoggedIn}}
   <br />
   <a class='btn' href='/signup'>Sign Up</a>
-{{/unless}}
+{{/unless}} --}}
 
 
