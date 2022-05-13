@@ -3,7 +3,7 @@
 
 ## Description
 
-Deployed App: https://radiant-wave-08847.herokuapp.com/owners
+Deployed App: https://radiant-wave-08847.herokuapp.com/
 
 As someone who has been looking to adopt a pet, I have had to navigate through multiple websites and applications all to end up not being able to adopt. 
 
@@ -27,7 +27,7 @@ When you arrive to our homepage you can either login or signup for full function
 
 ## Credits
 
-Cody Pollan, Mariana Tapia, Nirav Venkatesan, Paola Rivera. 
+Cody Polland, Mariana Tapia, Nirav Venkatesan, Paola Rivera. 
 
 place.dog API, bootstrap, npm sequelize, httpdog.
 
