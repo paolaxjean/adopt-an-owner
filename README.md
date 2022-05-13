@@ -3,17 +3,19 @@
 
 ## Description
 
-Deployed App: https://pure-reaches-94282.herokuapp.com/
+Deployed App: https://radiant-wave-08847.herokuapp.com/owners
 
 As someone who has been looking to adopt a pet, I have had to navigate through multiple websites and applications all to end up not being able to adopt. 
 
 - This project was created to minimize the number of applications an adopter has to fill and to hopefully rescue some pets from being euthanized. We learned how to difficult it can be to actually adopt and rescue a pet from the amount of forms that are needed, the applications and dealing with multiple shelters, adoption and rescue centers/
 
+- This app was built using javascript, node.js, express.js, mySQL, and sequelize.
 
+- APIs used: The HTTP Dog API (https://http.dog/) was used for rendering a dog picture error code on incorrect logins. The Place Dog API (https://place.dog/) was used to render random dog pictures under the temporary browse pets tab
 
 ## Installation
 
-There is no need for installation, this app can be deployed using Heroku.
+There is no need for installation, this app is deployed with Heroku.
 
 ## Usage
 
