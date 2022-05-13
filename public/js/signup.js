@@ -10,18 +10,15 @@ const handleSignupSubmit = async (event) => {
     const familySize  = document.querySelector("#family-size").value.trim();
     const income  = document.querySelector("#income").value.trim();
     const bio  = document.querySelector("#bio").value.trim();
-    const confirmPassword = document
-      .querySelector("#confirm-password")
-      .value.trim();
+
 
     if (!email || !password) {
       alert("You must provide a email and password.");
       return;
     }
 
-    if (password !== confirmPassword) {
-      alert("Passwords to not match.");
-      return;
+    if (password.length < 8){
+      alert("Password must be more than eight characters")
     }
 
     const response = await fetch("/api/users/signup", {
@@ -31,7 +28,7 @@ const handleSignupSubmit = async (event) => {
         "Content-Type": "application/json; charset=UTF-8",
       },
     });
-  console.log('request')
+
     if (!response.ok) {
       alert("Failed to sign up.");
       return;
