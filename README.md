@@ -19,11 +19,9 @@ There is no need for installation, this app can be deployed using Heroku.
 
 When you arrive to our homepage you can either login or signup for full functionality. Once logged in or signed up you can create a profile, and browse other owners. 
 
+![Screen Shot 2022-05-13 at 10 25 08 AM](https://user-images.githubusercontent.com/98481913/168336242-8290a989-39e1-48d5-91aa-4a5c7b18d2d4.png)
 
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
 
 ## Credits
 
