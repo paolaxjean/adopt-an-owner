@@ -1,79 +1,70 @@
-# Express-Handlebars Boilerplate <!-- omit in toc -->
 
-This boilerplate may be used as a starting point for building a full-stack app with Handlebars, Express, and Sequelize/MySQL. This boilerplate if configured for easy deployment on Heroku with JawsDB MySQL add-on.
+# Adopt-a-Owner
 
-- [Setup](#setup)
-- [Development](#development)
-- [Sessions](#sessions)
-- [Authentication](#authentication)
-- [Templates](#templates)
-- [Code Style](#code-style)
-- [Deploy to Heroku](#deploy-to-heroku)
+## Description
 
-## Setup
+As someone who has been looking to adopt a pet, I have had to navigate through multiple websites and applications all to end up not being able to adopt. 
 
-1. Run `npm i`.
-2. You will need an existing MySQL database.
-3. Create `.env` file with MySQL credentials for local development and a SECRET. Refer to [.env.EXAMPLE](./.env.EXAMPLE)
-4. Run `npm start` to start the app.
+- This project was created to minimize the number of applications an adopter has to fill and to hopefully rescue some pets from being euthanized. We learned how to difficult it can be to actually adopt and rescue a pet from the amount of forms that are needed, the applications and dealing with multiple shelters, adoption and rescue centers/
 
-## Development
 
-This boilerplate includes [nodemon](https://nodemon.io/). Run `npm run watch` to start the server in watch mode during development.
 
-## Sessions
+## Installation
 
-[express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) are used for session management. Configure cookies and sessions in [config/session.js](./config/session.js)
+There is no need for installation, this app can be deployed using Heroku.
 
-## Authentication
+## Usage
 
-Passwords are hashed using [bcrypt](https://www.npmjs.com/package/bcrypt). Middleware for protected routes redirects to `/login`. This can be modified by updating [util/withAuth.js](./util/withAuth.js).
+When you arrive to our homepage you can either login or signup for full functionality. Once logged in or signed up you can create a profile, and browse other owners. 
 
-## Templates
 
-[Handlebars.js](https://handlebarsjs.com/) and [express-handlebars](https://www.npmjs.com/package/express-handlebars) are used for rendering templates.
 
-You can add your own custom helper functions by exporting them from [util/helpers.js](./util/helpers.js).
+    ```md
+    ![alt text](assets/images/screenshot.png)
+    ```
 
-## Code Style
+## Credits
 
-[ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) are included for enforcing consistent code quality and format. The default configuration includes the ESLint recommended plugin, the Prettier plugin, plus a couple of additional rules. Modify [.eslintrc.js](./.eslintrc.json) to customize the rules.
+Cody Polland, Mariana Tapia, Nirav Venkatesan, Paola Rivera. 
 
-## Deploy to Heroku
+place.dog API, bootstrap, npm sequelize, httpdog.
 
-### Prerequisites
 
-Sign up for an [Heroku](https://id.heroku.com/login) account and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
-The app must be setup using Git for version control in order to deploy on Heroku
-following this guide. Be sure to initialize Git before proceeding if you did not
-initially create this project by using the template repo.
+## License
 
-### Create and Configure a Heroku App
+MIT License
 
-The code for this boilerplate is pre-configured to deploy to Heroku and connect to the JAWS DB add-on for MySQL. In order to deploy, you must provision the JAWS DB add-on.
 
-**IMPORTANT:** Payment info. must be provided in order to use the JawsDB MySQL
-add-on. The service is currently free with limitations. (as of 11/2/2021)
-However, you must provide a credit card to use the service.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-1. Create a Heroku app in the command line. `heroku create <optionally-provide an app name>`
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. Provision the [JawsDB MySQL add-on](https://elements.heroku.com/addons/jawsdb) with the free pricing plan. `heroku addons:create jawsdb:kitefin`
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-3. Add environmental variables to the heroku config. The boilerplate uses
-   `SECRET` to sign the session id cookie. Use a tool to generate a long
-   randomized string for this value. (e.g. `hsKVlvYcC5b#Fw1FS*qz`) Add `SECRET`
-   to config by running `heroku config:set SECRET=<your long random secret>`.
+---
 
-4. Use the same command to add any other environmental variables required for
-   your app to function. (`heroku config:set <name>=<value>`)
+🏆 
 
-5. Deploy the app by running `git push heroku main`. (Use the command again to deploy updates.)
+## Badges
 
-6. Open your app in the browser with `heroku open`.
+https://img.shields.io/badge/The-HydroCoders-blue
 
-### Seed JawsDB
 
-Running `heroku run npm run seed` will run the seed script in Heroku if your
-seeds are required for production.
+
+
+## How to Contribute
+
+If you would like to contribute please reach out to any of the contributors listed above via GitHub.com
